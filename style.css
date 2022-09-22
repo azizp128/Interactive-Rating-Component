@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 15px;
+  font-family: "Overpass", Courier, monospace;
+}
+
+:root {
+  --clr-body-bgcolor: hsl(216, 12%, 8%);
+  --clr-card-bgcolor: hsl(213, 19%, 18%);
+  --clr-bgstate: hsl(216, 12%, 54%);
+  --clr-bgbutton: hsl(25, 97%, 53%);
+
+  --fnt-title: hsl(0, 0%, 100%);
+  --fnt-paragraph: hsl(217, 12%, 63%);
+}
+
+body {
+  background-color: var(--clr-body-bgcolor);
+}
+
+.card {
+  background-color: var(--clr-card-bgcolor);
+}
+
+.card__title {
+  color: var(--fnt-title);
+  font-weight: 700;
+}
+
+.card__details,
+.rating {
+  color: var(--fnt-paragraph);
+}
+
+.rating {
+  background-color: var(--clr-bgstate);
+}
+
+.card__button {
+  background-color: var(--clr-bgbutton);
+}
+
+.card__state {
+  color: var(--clr-bgbutton);
+  background-color: var(--clr-bgstate);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-bgbutton);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
