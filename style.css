@@ -9,12 +9,16 @@
 
 :root {
   --clr-body-bgcolor: hsl(216, 12%, 8%);
-  --clr-card-bgcolor: hsl(213, 19%, 18%);
-  --clr-bgstate: hsl(216, 12%, 54%);
+  --clr-card-bgcolor: hsla(213, 20%, 18%, 0.555);
+  --clr-bgstate: hsla(216, 12%, 54%, 0.13);
   --clr-bgbutton: hsl(25, 97%, 53%);
 
   --fnt-title: hsl(0, 0%, 100%);
-  --fnt-paragraph: hsl(217, 12%, 63%);
+  --fnt-paragraph: hsla(217, 12%, 63%, 0.692);
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
@@ -23,20 +27,19 @@ body {
 
 .card {
   background-color: var(--clr-card-bgcolor);
-}
-
-.card__title {
-  color: var(--fnt-title);
-  font-weight: 700;
+  margin: 20vh 2em;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .card__details,
 .rating {
   color: var(--fnt-paragraph);
-}
-
-.rating {
-  background-color: var(--clr-bgstate);
 }
 
 .card__button {
@@ -48,11 +51,123 @@ body {
   background-color: var(--clr-bgstate);
 }
 
+/* Card 1 Start */
+.card-1 {
+  padding: 1.5em;
+}
+
+.star {
+  background-color: var(--clr-bgstate);
+  border-radius: 50%;
+  padding: 9px;
+  width: 30px;
+  margin-bottom: 1em;
+}
+
+.card__title {
+  font-size: 1.3rem;
+  color: var(--fnt-title);
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.card__details {
+  font-size: 0.85rem;
+  margin-bottom: 1.5em;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.rating {
+  font-size: 0.7rem;
+  padding: 1em 1.3em;
+  border-radius: 50%;
+  background-color: var(--clr-bgstate);
+}
+
+.rating:hover {
+  background-color: var(--clr-bgbutton);
+  color: var(--fnt-title);
+  cursor: pointer;
+}
+
+.card__button {
+  font-size: 0.9rem;
+  padding: 0.7em;
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--fnt-title);
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 100vmax;
+  margin-bottom: 1em;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background-color: var(--fnt-title);
+  color: var(--clr-bgbutton);
+}
+/* Card 1 End */
+
+/* Card 2 Start */
+.card-2 {
+  display: none;
+  padding: 1.5em 2em;
+  text-align: center;
+}
+
+.thankyou {
+  max-width: 120px;
+  margin-bottom: 1em;
+}
+
+.card__state {
+  margin: 0 auto;
+  font-size: 0.7rem;
+  max-width: 130px;
+  padding: 0.5em 0;
+  border-radius: 100vmax;
+  margin-bottom: 2em;
+}
+
+.card-2__title {
+  margin-bottom: 0.8em;
+}
+/* Card 2 End */
+
+.active {
+  background-color: hsla(217, 12%, 63%, 0.9);
+  color: hsla(0, 0%, 100%);
+}
+
 .attribution {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   font-size: 11px;
   text-align: center;
   color: var(--clr-bgbutton);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 1000px) {
+  body {
+    border: 2px red;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin: 20vh auto;
+    width: 23%;
+  }
 }
