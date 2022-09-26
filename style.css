@@ -84,7 +84,7 @@ body {
 
 .rating {
   font-size: 0.7rem;
-  padding: 1em 1.3em;
+  padding: 1em 1.5em;
   border-radius: 50%;
   background-color: var(--clr-bgstate);
 }
@@ -138,8 +138,8 @@ body {
 .card-2__title {
   margin-bottom: 0.8em;
 }
-/* Card 2 End */
 
+/* Card 2 End */
 .active {
   background-color: hsla(217, 12%, 63%, 0.9);
   color: hsla(0, 0%, 100%);
